@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 17" line=" 40" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 13" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\job.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 9" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\job.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 5" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\constants.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 37" line=" 7" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\warehouse.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 18" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\warehouse.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 6" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\jobtable.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 59" line=" 18" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\jobtable.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 5" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\boss.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 79" line=" 18" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\boss.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 16" line=" 2" >
+      <vfs_project>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr</vfs_project>
+      <vfs_file>C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\src\random.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
