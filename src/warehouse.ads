@@ -6,5 +6,6 @@ package warehouse is
       entry pushResult(someJob : in job.jobPtr);
       entry wareCmd(cmd : in Integer);
    end warehouse;
+   type whPtr is access warehouse;
    type T is array (1 .. constants.MaxResults) of job.jobPtr;
 end wareHouse;
