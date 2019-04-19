@@ -6,9 +6,9 @@ package body random is
 
    gen : Rand_Int.Generator;
 
-   function get ( n: in Positive) return Positive is
+   function get ( n: in Positive) return Integer is
    begin
-      return Rand_Int.Random(gen) mod n+1;
+      return Rand_Int.Random(gen) mod n;
    end get;
 
 begin

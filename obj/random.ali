@@ -1,0 +1,70 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U random%b		random.adb		cb230c64 OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W system%s		system.ads		system.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+U random%s		random.ads		5194e0f8 EE NE OO PK IL
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-numeri.ads		20180524051736 bb51c45a ada.numerics%s
+D a-nudira.ads		20180524051736 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20180524051736 72908cdb ada.numerics.discrete_random%b
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D random.ads		20190418174832 5194e0f8 random%s
+D random.adb		20190418174832 eb52b173 random%b
+D system.ads		20180524051738 32a08138 system%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-imguns.ads		20180524051736 9ff43cf7 system.img_uns%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-rannum.ads		20180524051736 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20180524051738 20ba1217 system.random_numbers%b
+D s-ransee.ads		20180524051738 01a57b33 system.random_seed%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D s-valuns.ads		20180524051738 10a8ed3b system.val_uns%s
+X 1 ada.ads
+16K9*Ada 20e8 8|1r6 5r28
+X 2 a-numeri.ads
+16K13*Numerics 32e17 8|1r10 5r32
+X 3 a-nudira.ads
+44k22*Discrete_Random 75e33 8|1w19 5r41
+50R9*Generator<13|63R9> 8|7r19[5]
+52V13*Random{integer} 8|11s23[5]
+55U14*Reset<13|100p14> 8|15s13[5]
+X 4 a-nudira.adb
+53V16 Random[13|83]{integer} 14|392b13[8|5]
+X 6 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 7 random.ads
+1K9*random 3l5 3e11 8|2b14 16l5 16t11
+2V13*get{integer} 2>19 8|9b13 12l8 12t11
+2i19 n{positive} 8|9b19 11r39
+X 8 random.adb
+4I12 Rand_Range{positive} 5r57
+5K12 Rand_Int[3|44] 7r10 11r14 15r4
+7r4 gen{3|50R9[5]} 11r30 15r19
+X 13 s-rannum.ads
+75V13*Random{6|74M9} 14|221i21
+76V13*Random{6|77M9} 14|221i21
+

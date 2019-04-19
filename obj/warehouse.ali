@@ -1,0 +1,107 @@
+V "GNAT Lib v2018"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_SELECT_ALTERNATIVES=3
+RV MAX_TASK_ENTRIES=3
+
+U warehouse%b		warehouse.adb		5e84a143 OO PK IL
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U warehouse%s		warehouse.ads		54a8fdfd EE OO PK IL
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+W constants%s		constants.ads		constants.ali
+W job%s			job.adb			job.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20180524051736 76789da1 ada%s
+D a-except.ads		20180524051736 291912d5 ada.exceptions%s
+D a-finali.ads		20180524051738 bf4f806b ada.finalization%s
+D a-reatim.ads		20180524051738 0240fc73 ada.real_time%s
+D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
+D a-tags.ads		20180524051738 491b781d ada.tags%s
+D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
+D constants.ads		20190418183410 6b167bf8 constants%s
+D interfac.ads		20180524051736 5ab55268 interfaces%s
+D i-c.ads		20180524051736 5421119b interfaces.c%s
+D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
+D job.ads		20190318102118 062f9413 job%s
+D system.ads		20180524051738 32a08138 system%s
+D s-atacco.ads		20180524051738 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20180524051738 54135002 system.exception_table%s
+D s-finroo.ads		20180524051738 4ff27390 system.finalization_root%s
+D s-multip.ads		20180524051736 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20180524051738 2e5b26a9 system.os_interface%s
+D s-parame.ads		20180524051738 48ec542b system.parameters%s
+D s-secsta.ads		20180524051738 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20180524051736 a7318a92 system.soft_links%s
+D s-stache.ads		20180524051738 a37c21ec system.stack_checking%s
+D s-stausa.ads		20180524051736 017a0a05 system.stack_usage%s
+D s-stalib.ads		20180524051738 09bd3940 system.standard_library%s
+D s-stoele.ads		20180524051738 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20180524051738 601f6b72 system.task_info%s
+D s-taspri.ads		20180524051738 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20180524051738 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20180524051738 1d8c1ccb system.tasking%s
+D s-taprob.ads		20180524051738 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20180524051738 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20180524051738 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20180524051738 cca55c94 system.tasking.stages%s
+D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
+D s-win32.ads		20180524051736 b7f96285 system.win32%s
+D warehouse.ads		20190320183900 39911216 warehouse%s
+D warehouse.adb		20190318115756 6715b355 warehouse%b
+X 8 constants.ads
+1K9*constants 19e14 37|1w6 10r26 38|30r27
+3i4*MaxResults{integer} 37|10r36 38|30r37
+X 12 job.ads
+1K9*job 12e8 37|2w6 5r38 6r37 10r51 38|14r28 23r48 31r47
+9P9*jobPtr(3R9) 37|5r42 6r41 10r55 38|23r52 31r51
+10U14*printJob 38|14s32
+X 23 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 37 warehouse.ads
+3K9*warehouse 11l5 11e14 38|1b14 44l5 44t14
+4T14*warehouse 8l8 8e17 9r25 38|3b14 42l8 42t17
+5Y13 pullResult 5<24 38|23b23 27l20 27t30
+5p24 someJob{12|9P9} 38|24m19 24r19
+6Y13 pushResult 6>24 38|31b23 38l20 38t30
+6p24 someJob{12|9P9} 38|34r34
+7Y13 wareCmd 7>21 38|9b20 20l17 20t24
+7i21 cmd{integer} 38|10r21
+9P9*whPtr(4T14)
+10A9*T(12|9P9)<integer> 38|4r11
+X 38 warehouse.adb
+4a7 wh{37|10A9} 12r31 13r28 14r41 24r30 24r33 25m19 25r22 25r34 25r48 25r51
+. 25r65 26m19 26r22 32r28 33r25 34m25
+5i7 length{natural} 22r18 28m16 28r24 30r18 39m16 39r24
+9i28 cmd{integer}
+12i26 i{integer} 13r31 14r44
+23p34 someJob{12|9P9}
+31p34 someJob{12|9P9}
+32i23 i{integer} 33r28 34r28
+

@@ -7,7 +7,7 @@ package body userInterface is
       version : Integer;
    begin
       loop
-         Ada.Text_IO.Put_Line("1-Show TaskTable 2-Show Warehouse");
+         Ada.Text_IO.Put_Line("1-Show TaskTable 2-Show Warehouse 3- show workers info");
          Ada.Text_IO.Put("Option: ");
          Ada.Integer_Text_IO.Get (version);
          case version is
@@ -15,17 +15,16 @@ package body userInterface is
                jobTabPtr.all.jobCmd(1);
             when 2 =>
                warePtr.all.wareCmd(1);
+            when 3 =>
+               for i in workerArr.all'Range loop
+                  workerArr.all(i).pushCmd(1);
+               end loop;
             when others =>
                null;
          end case;
       end loop;
    end userInterface;
 
-   function initUser ( JobTabPtr : jobtable.jobTabPtr ; warePtr : warehouse.whPtr )return userAccess is
-      userPtr : userAccess:= new userInterface(jobTabPtr,warePtr);
-   begin
-      return userPtr;
-   end initUser;
 begin
    null;
 end userInterface;

@@ -13,7 +13,7 @@ package body client is
                                  & Integer'Image(someJob.all.arg1) & someJob.all.operator
                                  & Integer'Image(someJob.all.arg2) & " =" & Integer'Image(someJob.all.result));
          end if;
-         delay (random.get(40)+80) *constants.ClientSpeed * 0.001;
+         delay (constants.ClientSpeed );
       end loop;
    end client;
 

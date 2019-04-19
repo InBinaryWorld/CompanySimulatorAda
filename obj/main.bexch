@@ -1,0 +1,33 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\cmpsimulator.gpr
+20190317083246
+[BOUND OBJECT FILES]
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\constants.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\job.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\addingMachine.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\jobtable.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\multiMachine.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\random.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\boss.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\warehouse.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\client.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\worker.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\userInterface.o
+C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\
+-LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\
+-LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnarl.a
+C:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

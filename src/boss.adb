@@ -11,7 +11,7 @@ package body boss is
       operators := ('+','-','*');
       loop
          someJob := new job.job'(random.get(1000),random.get(1000),
-                              operators(random.get(2)),0);
+                              operators(random.get(3)),0);
          jobTabPtr.all.pushJob(someJob);
 
          if(talkative) then
@@ -19,7 +19,7 @@ package body boss is
                                  & Integer'Image(someJob.all.arg1) & someJob.all.operator
                                  & Integer'Image(someJob.all.arg2));
          end if;
-         delay (random.get(40)+80) *constants.BossSpeed * 0.001;
+         delay (constants.BossSpeed );
       end loop;
    end boss;
 
