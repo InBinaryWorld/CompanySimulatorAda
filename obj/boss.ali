@@ -24,7 +24,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_TASKS=1+
 
-U boss%b		boss.adb		2f5cb2a0 OO PK IL
+U boss%b		boss.adb		05fea75c OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -64,8 +64,8 @@ D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D boss.ads		20190320203654 67920620 boss%s
-D boss.adb		20190418174614 de6b77d0 boss%b
-D constants.ads		20190418183410 6b167bf8 constants%s
+D boss.adb		20190419075250 de6b77d0 boss%b
+D constants.ads		20190419080230 41b46e04 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s

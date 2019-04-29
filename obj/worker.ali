@@ -29,7 +29,7 @@ RV MAX_SELECT_ALTERNATIVES=1
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U worker%b		worker.adb		ca4ef09c OO PK IL
+U worker%b		worker.adb		1ac47d95 OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -75,7 +75,7 @@ D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D addingmachine.ads	20190418150700 ec32ff85 addingmachine%s
-D constants.ads		20190418183410 6b167bf8 constants%s
+D constants.ads		20190419080230 41b46e04 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
@@ -116,85 +116,85 @@ D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
 D s-win32.ads		20180524051736 b7f96285 system.win32%s
 D warehouse.ads		20190320183900 39911216 warehouse%s
 D worker.ads		20190418183148 c72ee567 worker%s
-D worker.adb		20190418183656 f3c02445 worker%b
+D worker.adb		20190419075104 09e8bcb0 worker%b
 X 1 ada.ads
-16K9*Ada 20e8 54|4r6 24r22 35r13
+16K9*Ada 20e8 54|4r6 24r19 34r13
 X 10 a-textio.ads
-49K13*Text_IO 471e16 54|4w10 24r26 35r17
-263U14*Put_Line 54|24s34 35s25
+49K13*Text_IO 471e16 54|4w10 24r23 34r17
+263U14*Put_Line 54|24s31 34s25
 X 12 addingmachine.ads
-3K9*addingMachine 13e18 53|3w6 8r34 14r37 54|100r37
-5Y13 pullJob 54|72s36 79s42
-6Y13 pushJob 54|71s36 78s42
+3K9*addingMachine 13e18 53|3w6 8r34 14r37 54|114r39
+5Y13 pullJob 54|83s39 92s45
+6Y13 pushJob 54|82s39 90s45
 8P9*addingMachinePtr(4T14)
 10A9*addMachArr(8P9)<integer>
-11P9*addMachArrAcc(10A9) 53|8r48 14r51 54|100r51
+11P9*addMachArrAcc(10A9) 53|8r48 14r51 54|114r53
 X 13 constants.ads
-1K9*constants 19e14 54|6w6 42r23 56r28 67r23 82r28 95r16
-9i4*AddMach{positive} 54|67r33
-10i4*MultiMach{positive} 54|42r33
-13o4*WorkerSpeed{duration} 54|95r26
-18o4*Unpatient{duration} 54|56r38 82r38
+1K9*constants 19e14 54|6w6 41r26 61r31 74r26 95r31 109r16
+9i4*AddMach{positive} 54|74r36
+10i4*MultiMach{positive} 54|41r36
+13o4*WorkerSpeed{duration} 54|109r26
+18o4*Unpatient{duration} 54|61r41 95r41
 X 18 job.ads
 1K9*job 12e8 53|5w6 54|1w6 11r17
-4i7*arg1{integer} 54|36r62
-5i7*arg2{integer} 54|37r62
-6e7*operator{character} 54|36r82 40r27
-7i7*result{integer} 54|37r103
+4i7*arg1{integer} 54|35r62
+5i7*arg2{integer} 54|36r62
+6e7*operator{character} 54|35r82 39r27
+7i7*result{integer} 54|36r103
 9P9*jobPtr(3R9) 54|11r21
 X 19 jobtable.ads
-4K9*jobTable 12e13 53|1w6 7r69 13r74 54|2w6 99r75
-6Y13 pullJob 54|32s20
-11P9*jobTabPtr(5T14) 53|7r78 13r83 54|99r84
+4K9*jobTable 12e13 53|1w6 7r69 13r74 54|2w6 113r75
+6Y13 pullJob 54|31s20
+11P9*jobTabPtr(5T14) 53|7r78 13r83 54|113r84
 X 20 multimachine.ads
-2K9*multiMachine 14e17 53|4w6 8r78 14r81 54|100r81
-4Y13 pullJob 54|46s38 53s44
-5Y13 pushJob 54|45s38 52s44
+2K9*multiMachine 14e17 53|4w6 8r78 14r81 54|114r83
+4Y13 pullJob 54|48s38 58s47
+5Y13 pushJob 54|47s41 56s47
 7P9*multiMachinePtr(3T14)
 10A9*multiMachArr(7P9)<integer>
-11P9*multiMachArrAcc(10A9) 53|8r91 14r94 54|100r94
+11P9*multiMachArrAcc(10A9) 53|8r91 14r94 54|114r96
 X 21 random.ads
-1K9*random 3e11 54|5w6 7w6 18r20 43r20 68r20
-2V13*get{integer} 54|18s27 43s27 68s27
+1K9*random 3e11 54|5w6 7w6 18r20 42r23 75r23
+2V13*get{integer} 54|18s27 42s30 75s30
 X 37 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 52 warehouse.ads
-3K9*warehouse 11e14 53|2w6 7r99 13r104 54|3w6 99r105
-6Y13 pushResult 54|94s22
-9P9*whPtr(4T14) 53|7r109 13r114 54|99r115
+3K9*warehouse 11e14 53|2w6 7r99 13r104 54|3w6 113r105
+6Y13 pushResult 54|108s22
+9P9*whPtr(4T14) 53|7r109 13r114 54|113r115
 X 53 worker.ads
-6K9*worker 16l5 16e11 54|9b14 112l5 112t11
-7T14*worker 7d21 7d36 7d57 7d89 8d21 8d63 10l8 10e14 11r59 54|10b14 97l8
-. 97t14 105r35
-7i21 id{integer} 54|24r55 35r60
-7b36 talkative{boolean} 54|34r13
-7p57 JobTabPtr{19|11P9} 54|32r10
-7p89 warePtr{52|9P9} 54|94r10
-8p21 addMachArr{12|11P9} 54|71r16 72r16 78r22 79r22
-8p63 multiMachArr{20|11P9} 54|45r16 46r16 52r22 53r22
-9Y13 pushCmd 9>21 54|22b23 27l20 27t27
-9i21 cmd{integer} 54|23r23
-11A9*workerArray(7T14)<integer> 12r35 54|103r27
-12P9*workerArrAccess(11A9) 14r118 54|100r118 101r22
-13V13*initWorkers{12P9} 13>25 13>41 13>62 13>94 14>24 14>66 54|99b13 108l8
-. 108t19
-13i25 Size{integer} 54|99b26 103r44
-13b41 talkative{boolean} 54|99b42 105r44
-13p62 JobTabPtr{19|11P9} 54|99b63 105r54
-13p94 warePtr{52|9P9} 54|99b95 105r64
-14p24 addMachArr{12|11P9} 54|100b24 105r72
-14p66 multiMachArr{20|11P9} 54|100b66 105r83
+6K9*worker 16l5 16e11 54|9b14 126l5 126t11
+7T14*worker 7d21 7d36 7d57 7d89 8d21 8d63 10l8 10e14 11r59 54|10b14 111l8
+. 111t14 119r35
+7i21 id{integer} 54|24r52 34r60
+7b36 talkative{boolean} 54|33r13
+7p57 JobTabPtr{19|11P9} 54|31r10
+7p89 warePtr{52|9P9} 54|108r10
+8p21 addMachArr{12|11P9} 54|82r19 83r19 90r25 92r25
+8p63 multiMachArr{20|11P9} 54|47r19 48r16 56r25 58r25
+9Y13 pushCmd 9>21 54|22b20 26l17 26t24
+9i21 cmd{integer} 54|23r20
+11A9*workerArray(7T14)<integer> 12r35 54|117r27
+12P9*workerArrAccess(11A9) 14r118 54|114r120 115r22
+13V13*initWorkers{12P9} 13>25 13>41 13>62 13>94 14>24 14>66 54|113b13 122l8
+. 122t19
+13i25 Size{integer} 54|113b26 117r44
+13b41 talkative{boolean} 54|113b42 119r44
+13p62 JobTabPtr{19|11P9} 54|113b63 119r54
+13p94 warePtr{52|9P9} 54|113b95 119r64
+14p24 addMachArr{12|11P9} 54|114b26 119r72
+14p66 multiMachArr{20|11P9} 54|114b68 119r83
 X 54 worker.adb
-11p7 someJob{18|9P9} 32m28 32r28 36r50 36r70 37r50 37r91 40r15 45r46 46m46
-. 46r46 52r52 53m52 53r52 71r44 72m44 72r44 78r50 79m50 79r50 94r33
-12i7 isPatient{integer} 18m7 24r81 44r16 70r16
-13i7 idx{integer} 43m13 45r33 46r33 52r39 53r39 57m22 57r29 58r25 59m25 68m13
-. 71r31 72r31 78r37 79r37 83m22 83r29 84r25 85m25
-14i7 maxIdx{integer} 42m13 43r31 58r31 67m13 68r31 84r31
-15i7 counter{integer} 24r114 93m10 93r20
-16b7 done{boolean} 49m16 50r22 54m22 75m16 76r22 80m22
-22i31 cmd{integer}
-101p7 workerTabPtr{53|12P9} 103m7 104r16 105r10 107r14
-104i11 i{integer} 105r27 105r42
+11p7 someJob{18|9P9} 31m28 31r28 35r50 35r70 36r50 36r91 39r15 47r49 48m46
+. 48r46 56r55 58m55 58r55 82r47 83m47 83r47 90r53 92m53 92r53 108r33
+12i7 isPatient{integer} 18m7 24r78 43r19 77r19
+13i7 idx{integer} 42m16 47r36 48r33 56r42 58r42 64m25 64r32 65r28 66m28 75m16
+. 82r34 83r34 90r40 92r40 98m25 98r32 99r28 100m28
+14i7 maxIdx{integer} 41m16 42r34 65r34 74m16 75r34 99r34
+15i7 counter{integer} 24r111 107m10 107r20
+16b7 done{boolean} 51m19 52r25 59m25 86m19 87r25 93m25
+22i28 cmd{integer}
+115p7 workerTabPtr{53|12P9} 117m7 118r16 119r10 121r14
+118i11 i{integer} 119r27 119r42
 

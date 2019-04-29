@@ -25,7 +25,7 @@ Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U jobtable%s		jobtable.ads		4f2c90f2 EE OO PK
+U jobtable%s		jobtable.ads		658e850e EE OO PK
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 W constants%s		constants.ads		constants.ali
 W job%s			job.adb			job.ali
@@ -43,7 +43,7 @@ D a-reatim.ads		20180524051738 0240fc73 ada.real_time%s
 D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D constants.ads		20190418183410 6b167bf8 constants%s
+D constants.ads		20190419080230 41b46e04 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s

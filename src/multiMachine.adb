@@ -1,7 +1,7 @@
 with job;
 with constants;
-package body multiMachine is
-   task body multiMachine is
+package body multimachine is
+   task body multimachine is
       myJob : job.jobPtr;
       done : boolean := false;
    begin
@@ -20,10 +20,10 @@ package body multiMachine is
                   myJob := someJob;
                   done := true;
                end pushJob;
+               delay (constants.MultiMachSpeed);
          end select;
-         delay (constants.MultiMachSpeed);
       end loop;
-   end multiMachine;
+   end multimachine;
 
 
 
@@ -40,4 +40,4 @@ package body multiMachine is
 
 
 
-end multiMachine;
+end multimachine;

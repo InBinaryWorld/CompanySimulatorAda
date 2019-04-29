@@ -38,57 +38,72 @@ package body worker is
 
          case someJob.all.operator is
             when '*' =>
-            maxIdx := constants.MultiMach;
-            idx := random.get(maxIdx)+1;
-            if isPatient = 1 then
-               multiMachArr.all(idx).pushJob(someJob);
+               maxIdx := constants.MultiMach;
+               idx := random.get(maxIdx)+1;
+               if isPatient = 1 then
+
+                 -- Ada.Text_IO.Put_Line("patient " & id'Image & " idx: " & idx'Image & " multi");
+
+                  multiMachArr.all(idx).pushJob(someJob);
                multiMachArr.all(idx).pullJob(someJob);
 
-            else
-               done :=false;
-               while done = false loop
-                  select
-                     multiMachArr.all(idx).pushJob(someJob);
-                     multiMachArr.all(idx).pullJob(someJob);
-                     done :=true;
-                  or
-                     delay constants.Unpatient;
-                     idx := idx +1;
-                     if idx = maxIdx then
-                        idx := 0;
-                     end if;
+               else
+                  done :=false;
+                  while done = false loop
+                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " loop multi  idx:" & idx'image);
+                     select
+
+                        multiMachArr.all(idx).pushJob(someJob);
+                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " idx: " & idx'Image & " multi");
+                        multiMachArr.all(idx).pullJob(someJob);
+                        done :=true;
+                     or
+                        delay constants.Unpatient;
+
+                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " change multi start");
+                        idx := idx +1;
+                        if idx = maxIdx+1 then
+                           idx := 1;
+                        end if;
                   end select;
-               end loop;
-            end if;
+                  end loop;
+               end if;
 
 
-         when others =>
-            maxIdx := constants.AddMach;
-            idx := random.get(maxIdx)+1;
+            when others =>
+               maxIdx := constants.AddMach;
+               idx := random.get(maxIdx)+1;
 
-            if isPatient = 1 then
-               addMachArr.all(idx).pushJob(someJob);
-               addMachArr.all(idx).pullJob(someJob);
-
-            else
-               done :=false;
-               while done = false loop
-                  select
-                     addMachArr.all(idx).pushJob(someJob);
-                     addMachArr.all(idx).pullJob(someJob);
-                     done := true;
-                  or
-                     delay constants.Unpatient;
-                     idx := idx +1;
-                     if idx = maxIdx then
-                        idx := 0;
-                     end if;
-                  end select;
-               end loop;
-            end if;
+               if isPatient = 1 then
 
 
+                  --Ada.Text_IO.Put_Line("patient " & id'Image & " idx: " & idx'Image & " add");
+
+                  addMachArr.all(idx).pushJob(someJob);
+                  addMachArr.all(idx).pullJob(someJob);
+
+               else
+                  done :=false;
+                  while done = false loop
+                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " loop add idx: " & idx'Image);
+                     select
+                        addMachArr.all(idx).pushJob(someJob);
+                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " idx: " & idx'Image & " add");
+                        addMachArr.all(idx).pullJob(someJob);
+                        done := true;
+                     or
+                        delay constants.Unpatient;
+
+                        --Ada.Text_IO.Put_Line("patient " & id'Image & " change add");
+                        idx := idx +1;
+                        if idx = maxIdx+1 then
+                           idx := 1;
+                        end if;
+                     end select;
+                  end loop;
+               end if;
          end case;
+
          counter:= counter +1;
          warePtr.all.pushResult(someJob);
          delay constants.WorkerSpeed ;
@@ -96,7 +111,7 @@ package body worker is
    end worker;
 
    function initWorkers (Size : Integer; talkative : Boolean; JobTabPtr : jobtable.jobTabPtr ;warePtr : warehouse.whPtr;
-                       addMachArr : addingMachine.addMachArrAcc ;multiMachArr : multiMachine.multiMachArrAcc) return workerArrAccess is
+                         addMachArr : addingMachine.addMachArrAcc ;multiMachArr : multiMachine.multiMachArrAcc) return workerArrAccess is
       workerTabPtr : workerArrAccess;
    begin
       workerTabPtr := new workerArray(1 .. Size);

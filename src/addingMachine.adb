@@ -1,6 +1,6 @@
 with job;
-package body addingMachine is
-   task body addingMachine is
+package body addingmachine is
+   task body addingmachine is
       myJob : job.jobPtr;
       done : boolean := false;
    begin
@@ -28,10 +28,10 @@ package body addingMachine is
                   done := true;
 
                end pushJob;
+               delay (constants.AddMachSpeed);
          end select;
-         delay (constants.AddMachSpeed);
       end loop;
-   end addingMachine;
+   end addingmachine;
 
    function initAddMach(Size : Integer) return addMachArrAcc is
       addMachTabPtr : addMachArrAcc;
@@ -44,5 +44,5 @@ package body addingMachine is
    end initAddMach;
 
 
-end addingMachine;
+end addingmachine;
 

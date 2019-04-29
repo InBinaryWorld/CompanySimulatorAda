@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#2e93467a#;
+   u00001 : constant Version_32 := 16#04315386#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -303,9 +303,9 @@ package ada_main is
    pragma Export (C, u00132, "system__val_unsB");
    u00133 : constant Version_32 := 16#168e1080#;
    pragma Export (C, u00133, "system__val_unsS");
-   u00134 : constant Version_32 := 16#22055997#;
+   u00134 : constant Version_32 := 16#2c95ef8c#;
    pragma Export (C, u00134, "addingmachineB");
-   u00135 : constant Version_32 := 16#810b106e#;
+   u00135 : constant Version_32 := 16#aba90592#;
    pragma Export (C, u00135, "addingmachineS");
    u00136 : constant Version_32 := 16#357666d8#;
    pragma Export (C, u00136, "ada__calendar__delaysB");
@@ -449,15 +449,15 @@ package ada_main is
    pragma Export (C, u00205, "ada__real_timeB");
    u00206 : constant Version_32 := 16#69ea8064#;
    pragma Export (C, u00206, "ada__real_timeS");
-   u00207 : constant Version_32 := 16#6b167bf8#;
+   u00207 : constant Version_32 := 16#41b46e04#;
    pragma Export (C, u00207, "constantsS");
-   u00208 : constant Version_32 := 16#2f5cb2a0#;
+   u00208 : constant Version_32 := 16#05fea75c#;
    pragma Export (C, u00208, "bossB");
    u00209 : constant Version_32 := 16#45877939#;
    pragma Export (C, u00209, "bossS");
    u00210 : constant Version_32 := 16#53aeb93d#;
    pragma Export (C, u00210, "jobtableB");
-   u00211 : constant Version_32 := 16#4f2c90f2#;
+   u00211 : constant Version_32 := 16#658e850e#;
    pragma Export (C, u00211, "jobtableS");
    u00212 : constant Version_32 := 16#cb230c64#;
    pragma Export (C, u00212, "randomB");
@@ -473,7 +473,7 @@ package ada_main is
    pragma Export (C, u00217, "system__random_seedB");
    u00218 : constant Version_32 := 16#69b0a863#;
    pragma Export (C, u00218, "system__random_seedS");
-   u00219 : constant Version_32 := 16#ff19fd49#;
+   u00219 : constant Version_32 := 16#d5bbe8b5#;
    pragma Export (C, u00219, "clientB");
    u00220 : constant Version_32 := 16#33a98081#;
    pragma Export (C, u00220, "clientS");
@@ -487,9 +487,9 @@ package ada_main is
    pragma Export (C, u00224, "system__concat_7S");
    u00225 : constant Version_32 := 16#5e84a143#;
    pragma Export (C, u00225, "warehouseB");
-   u00226 : constant Version_32 := 16#54a8fdfd#;
+   u00226 : constant Version_32 := 16#7e0ae801#;
    pragma Export (C, u00226, "warehouseS");
-   u00227 : constant Version_32 := 16#9077a3ec#;
+   u00227 : constant Version_32 := 16#b36aeb5a#;
    pragma Export (C, u00227, "multimachineB");
    u00228 : constant Version_32 := 16#5765f871#;
    pragma Export (C, u00228, "multimachineS");
@@ -497,7 +497,7 @@ package ada_main is
    pragma Export (C, u00229, "userinterfaceB");
    u00230 : constant Version_32 := 16#b66f7cfe#;
    pragma Export (C, u00230, "userinterfaceS");
-   u00231 : constant Version_32 := 16#ca4ef09c#;
+   u00231 : constant Version_32 := 16#1ac47d95#;
    pragma Export (C, u00231, "workerB");
    u00232 : constant Version_32 := 16#67fd8f9c#;
    pragma Export (C, u00232, "workerS");

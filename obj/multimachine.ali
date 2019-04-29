@@ -26,7 +26,7 @@ RV MAX_SELECT_ALTERNATIVES=2
 RV MAX_TASK_ENTRIES=2
 RV MAX_TASKS=1+
 
-U multimachine%b	multimachine.adb	9077a3ec OO PK
+U multimachine%b	multimachine.adb	b36aeb5a OO PK
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W constants%s		constants.ads		constants.ali
@@ -56,13 +56,13 @@ D a-reatim.ads		20180524051738 0240fc73 ada.real_time%s
 D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D constants.ads		20190418183410 6b167bf8 constants%s
+D constants.ads		20190419080230 41b46e04 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
 D job.ads		20190318102118 062f9413 job%s
 D multimachine.ads	20190418150712 514a6c62 multimachine%s
-D multimachine.adb	20190418151024 ac042065 multimachine%b
+D multimachine.adb	20190419074644 a5bb7d2f multimachine%b
 D system.ads		20180524051738 32a08138 system%s
 D s-atacco.ads		20180524051738 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
@@ -88,8 +88,8 @@ D s-traent.ads		20180524051736 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
 D s-win32.ads		20180524051736 b7f96285 system.win32%s
 X 10 constants.ads
-1K9*constants 19e14 16|2w6 24r17
-16o4*MultiMachSpeed{duration} 16|24r27
+1K9*constants 19e14 16|2w6 23r23
+16o4*MultiMachSpeed{duration} 16|23r33
 X 14 job.ads
 1K9*job 12e8 15|1w6 4r35 5r34 16|1w6 5r15 12r45 18r45
 4i7*arg1{integer} 16|19r53
