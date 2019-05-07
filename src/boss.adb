@@ -11,7 +11,7 @@ package body boss is
       operators := ('+','-','*');
       loop
          someJob := new job.job'(random.get(1000),random.get(1000),
-                              operators(random.get(3)),0);
+                              operators(random.get(3)),0,false);
          jobTabPtr.all.pushJob(someJob);
 
          if(talkative) then

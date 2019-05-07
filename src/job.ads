@@ -5,6 +5,7 @@ package job  is
       arg2 : Integer;
       operator : Character;
       result : Integer;
+      isDone : Boolean :=false;
    end record;
    type jobPtr is access all job;
    procedure printJob(someJobPtr : jobPtr);

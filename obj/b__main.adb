@@ -23,35 +23,37 @@ package body ada_main is
    E080 : Short_Integer; pragma Import (Ada, E080, "system__object_reader_E");
    E047 : Short_Integer; pragma Import (Ada, E047, "system__dwarf_lines_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
-   E214 : Short_Integer; pragma Import (Ada, E214, "ada__numerics_E");
+   E159 : Short_Integer; pragma Import (Ada, E159, "ada__numerics_E");
    E103 : Short_Integer; pragma Import (Ada, E103, "ada__tags_E");
    E101 : Short_Integer; pragma Import (Ada, E101, "ada__streams_E");
-   E162 : Short_Integer; pragma Import (Ada, E162, "interfaces__c__strings_E");
+   E171 : Short_Integer; pragma Import (Ada, E171, "interfaces__c__strings_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "system__file_control_block_E");
    E114 : Short_Integer; pragma Import (Ada, E114, "system__finalization_root_E");
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
-   E172 : Short_Integer; pragma Import (Ada, E172, "system__task_info_E");
+   E181 : Short_Integer; pragma Import (Ada, E181, "system__task_info_E");
    E139 : Short_Integer; pragma Import (Ada, E139, "ada__calendar_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "ada__calendar__delays_E");
-   E206 : Short_Integer; pragma Import (Ada, E206, "ada__real_time_E");
+   E215 : Short_Integer; pragma Import (Ada, E215, "ada__real_time_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E218 : Short_Integer; pragma Import (Ada, E218, "system__random_seed_E");
-   E186 : Short_Integer; pragma Import (Ada, E186, "system__tasking__initialization_E");
-   E194 : Short_Integer; pragma Import (Ada, E194, "system__tasking__protected_objects_E");
-   E196 : Short_Integer; pragma Import (Ada, E196, "system__tasking__protected_objects__entries_E");
-   E200 : Short_Integer; pragma Import (Ada, E200, "system__tasking__queuing_E");
-   E204 : Short_Integer; pragma Import (Ada, E204, "system__tasking__stages_E");
+   E163 : Short_Integer; pragma Import (Ada, E163, "system__random_seed_E");
+   E195 : Short_Integer; pragma Import (Ada, E195, "system__tasking__initialization_E");
+   E203 : Short_Integer; pragma Import (Ada, E203, "system__tasking__protected_objects_E");
+   E205 : Short_Integer; pragma Import (Ada, E205, "system__tasking__protected_objects__entries_E");
+   E209 : Short_Integer; pragma Import (Ada, E209, "system__tasking__queuing_E");
+   E213 : Short_Integer; pragma Import (Ada, E213, "system__tasking__stages_E");
    E146 : Short_Integer; pragma Import (Ada, E146, "job_E");
+   E220 : Short_Integer; pragma Import (Ada, E220, "jobtable_E");
+   E158 : Short_Integer; pragma Import (Ada, E158, "random_E");
    E135 : Short_Integer; pragma Import (Ada, E135, "addingmachine_E");
-   E211 : Short_Integer; pragma Import (Ada, E211, "jobtable_E");
+   E218 : Short_Integer; pragma Import (Ada, E218, "boss_E");
    E228 : Short_Integer; pragma Import (Ada, E228, "multimachine_E");
-   E213 : Short_Integer; pragma Import (Ada, E213, "random_E");
-   E209 : Short_Integer; pragma Import (Ada, E209, "boss_E");
+   E230 : Short_Integer; pragma Import (Ada, E230, "service_E");
+   E232 : Short_Integer; pragma Import (Ada, E232, "serviceman_E");
    E226 : Short_Integer; pragma Import (Ada, E226, "warehouse_E");
-   E220 : Short_Integer; pragma Import (Ada, E220, "client_E");
-   E232 : Short_Integer; pragma Import (Ada, E232, "worker_E");
-   E230 : Short_Integer; pragma Import (Ada, E230, "userinterface_E");
+   E222 : Short_Integer; pragma Import (Ada, E222, "client_E");
+   E236 : Short_Integer; pragma Import (Ada, E236, "worker_E");
+   E234 : Short_Integer; pragma Import (Ada, E234, "userinterface_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -62,7 +64,7 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E196 := E196 - 1;
+      E205 := E205 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "system__tasking__protected_objects__entries__finalize_spec");
@@ -194,7 +196,7 @@ package body ada_main is
            True, True, False, True, True, True, True, False, 
            False, True, False, False, False, False, True, True, 
            True, False, False, False),
-         Count => (0, 0, 0, 0, 3, 3, 6, 0, 0, 0),
+         Count => (0, 0, 0, 0, 5, 5, 7, 0, 0, 0),
          Unknown => (False, False, False, False, False, False, True, False, False, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -245,14 +247,14 @@ package body ada_main is
       E039 := E039 + 1;
       E080 := E080 + 1;
       Ada.Numerics'Elab_Spec;
-      E214 := E214 + 1;
+      E159 := E159 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E103 := E103 + 1;
       Ada.Streams'Elab_Spec;
       E101 := E101 + 1;
       Interfaces.C.Strings'Elab_Spec;
-      E162 := E162 + 1;
+      E171 := E171 + 1;
       System.File_Control_Block'Elab_Spec;
       E115 := E115 + 1;
       System.Finalization_Root'Elab_Spec;
@@ -262,7 +264,7 @@ package body ada_main is
       System.File_Io'Elab_Body;
       E111 := E111 + 1;
       System.Task_Info'Elab_Spec;
-      E172 := E172 + 1;
+      E181 := E181 + 1;
       Ada.Calendar'Elab_Spec;
       Ada.Calendar'Elab_Body;
       E139 := E139 + 1;
@@ -270,49 +272,55 @@ package body ada_main is
       E137 := E137 + 1;
       Ada.Real_Time'Elab_Spec;
       Ada.Real_Time'Elab_Body;
-      E206 := E206 + 1;
+      E215 := E215 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
       System.Random_Seed'Elab_Body;
-      E218 := E218 + 1;
+      E163 := E163 + 1;
       System.Tasking.Initialization'Elab_Body;
-      E186 := E186 + 1;
+      E195 := E195 + 1;
       System.Tasking.Protected_Objects'Elab_Body;
-      E194 := E194 + 1;
+      E203 := E203 + 1;
       System.Tasking.Protected_Objects.Entries'Elab_Spec;
-      E196 := E196 + 1;
+      E205 := E205 + 1;
       System.Tasking.Queuing'Elab_Body;
-      E200 := E200 + 1;
+      E209 := E209 + 1;
       System.Tasking.Stages'Elab_Body;
-      E204 := E204 + 1;
+      E213 := E213 + 1;
       E146 := E146 + 1;
-      Addingmachine'Elab_Spec;
-      Addingmachine'Elab_Body;
-      E135 := E135 + 1;
       Jobtable'Elab_Spec;
       jobtable'elab_body;
-      E211 := E211 + 1;
-      Multimachine'Elab_Spec;
-      Multimachine'Elab_Body;
-      E228 := E228 + 1;
+      E220 := E220 + 1;
       random'elab_body;
-      E213 := E213 + 1;
+      E158 := E158 + 1;
+      addingmachine'elab_spec;
+      addingmachine'elab_body;
+      E135 := E135 + 1;
       boss'elab_spec;
       boss'elab_body;
-      E209 := E209 + 1;
+      E218 := E218 + 1;
+      multimachine'elab_spec;
+      multimachine'elab_body;
+      E228 := E228 + 1;
+      service'elab_spec;
+      serviceman'elab_spec;
+      serviceman'elab_body;
+      E232 := E232 + 1;
+      service'elab_body;
+      E230 := E230 + 1;
       warehouse'elab_spec;
       warehouse'elab_body;
       E226 := E226 + 1;
       client'elab_spec;
       client'elab_body;
-      E220 := E220 + 1;
+      E222 := E222 + 1;
       worker'elab_spec;
       worker'elab_body;
-      E232 := E232 + 1;
+      E236 := E236 + 1;
       Userinterface'Elab_Spec;
       Userinterface'Elab_Body;
-      E230 := E230 + 1;
+      E234 := E234 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -350,15 +358,17 @@ package body ada_main is
 --  BEGIN Object file/option list
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\constants.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\job.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\addingMachine.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\jobtable.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\multiMachine.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\random.o
+   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\addingmachine.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\boss.o
+   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\multimachine.o
+   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\serviceman.o
+   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\service.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\warehouse.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\client.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\worker.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\userInterface.o
+   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\userinterface.o
    --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\main.o
    --   -LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\
    --   -LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\

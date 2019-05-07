@@ -25,7 +25,7 @@ Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W warehouse%s		warehouse.adb		warehouse.ali
 
-U userinterface%s	userinterface.ads	b66f7cfe EE OO PK
+U userinterface%s	userinterface.ads	5833ec86 EE OO PK
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W jobtable%s		jobtable.adb		jobtable.ali
@@ -49,15 +49,16 @@ D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-tiinio.ads		20180524051736 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D addingmachine.ads	20190418150700 ec32ff85 addingmachine%s
-D constants.ads		20190419080230 41b46e04 constants%s
+D addingmachine.ads	20190506125126 12c237cc addingmachine%s
+D constants.ads		20190506134546 9a729a43 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D job.ads		20190318102118 062f9413 job%s
+D job.ads		20190506092006 e9ab4254 job%s
 D jobtable.ads		20190318114930 22157f19 jobtable%s
-D multimachine.ads	20190418150712 514a6c62 multimachine%s
+D multimachine.ads	20190506125126 99ccc25e multimachine%s
+D service.ads		20190506132006 1b97b92d service%s
 D system.ads		20180524051738 32a08138 system%s
 D s-atacco.ads		20180524051738 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
@@ -88,41 +89,41 @@ D s-win32.ads		20180524051736 b7f96285 system.win32%s
 D userinterface.ads	20190418180718 6ac5f496 userinterface%s
 D userinterface.adb	20190418183656 e40d2b96 userinterface%b
 D warehouse.ads		20190320183900 39911216 warehouse%s
-D worker.ads		20190418183148 c72ee567 worker%s
+D worker.ads		20190506121254 2972751f worker%s
 X 1 ada.ads
-16K9*Ada 20e8 49|3r6 4r6 10r10 11r10 12r10
+16K9*Ada 20e8 50|3r6 4r6 10r10 11r10 12r10
 X 4 a-inteio.ads
-18K13*Integer_Text_IO[10|46] 49|4w10 12r14
+18K13*Integer_Text_IO[10|46] 50|4w10 12r14
 X 9 a-textio.ads
-49K13*Text_IO 471e16 49|3w10 10r14 11r14
-242U14*Put 49|11s22
-263U14*Put_Line 49|10s22
+49K13*Text_IO 471e16 50|3w10 10r14 11r14
+242U14*Put 50|11s22
+263U14*Put_Line 50|10s22
 X 10 a-tiinio.ads
-56U14*Get 49|12s30[4|18]
+56U14*Get 50|12s30[4|18]
 X 19 jobtable.ads
-4K9*jobTable 12e13 48|2w6 5r40 49|1w6
-8Y13 jobCmd 49|15s30
-11P9*jobTabPtr(5T14) 48|5r49
-X 33 s-stausa.ads
+4K9*jobTable 12e13 49|2w6 5r40 50|1w6
+8Y13 jobCmd 50|15s30
+11P9*jobTabPtr(5T14) 49|5r49
+X 34 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 48 userinterface.ads
-4K9*userInterface 7l5 7e18 49|5b14 30l5 30t18
-5T14*userInterface 5d28 5d61 5d89 6r30 49|6b14 26l8 26t21
-5p28 jobTabPtr{19|11P9} 49|15r16
-5p61 warePtr{50|9P9} 49|17r16
-5p89 workerArr{51|12P9} 49|19r25 20r19
+X 49 userinterface.ads
+4K9*userInterface 7l5 7e18 50|5b14 30l5 30t18
+5T14*userInterface 5d28 5d61 5d89 6r30 50|6b14 26l8 26t21
+5p28 jobTabPtr{19|11P9} 50|15r16
+5p61 warePtr{51|9P9} 50|17r16
+5p89 workerArr{52|13P9} 50|19r25 20r19
 6P9*userAccess(5T14)
-X 49 userinterface.adb
+X 50 userinterface.adb
 7i7 version{integer} 12m35 13r15
 19i20 i{integer} 20r33
-X 50 warehouse.ads
-3K9*warehouse 48|1w6 5r71 49|2w6 50|11e14
-7Y13 wareCmd 49|17s28
-9P9*whPtr(4T14) 48|5r81
-X 51 worker.ads
-6K9*worker 48|3w6 5r101 51|16e11
-9Y13 pushCmd 49|20s36
-11A9*workerArray(7T14)<integer>
-12P9*workerArrAccess(11A9) 48|5r108
+X 51 warehouse.ads
+3K9*warehouse 49|1w6 5r71 50|2w6 51|11e14
+7Y13 wareCmd 50|17s28
+9P9*whPtr(4T14) 49|5r81
+X 52 worker.ads
+7K9*worker 49|3w6 5r101 52|17e11
+10Y13 pushCmd 50|20s36
+12A9*workerArray(8T14)<integer>
+13P9*workerArrAccess(12A9) 49|5r108
 

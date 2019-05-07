@@ -11,9 +11,15 @@ with client;
 with userInterface;
 with addingMachine;
 with multiMachine;
+with service;
+with serviceman;
 procedure Main is
    warePtr : warehouse.whPtr := new warehouse.warehouse;
    jobTabPtr : jobtable.jobTabPtr := new  jobtable.jobtable;
+   userI : userInterface.userAccess ;
+
+   servicePtr : service.servicePtr ;
+   servicemanArr : serviceman.servicemanArrAcc;
 
    addMachArr : addingMachine.addMachArrAcc;
    multiMachArr : multiMachine.multiMachArrAcc;
@@ -21,7 +27,6 @@ procedure Main is
    bossArr : boss.bossArrAccess ;
    workerArr : worker.workerArrAccess ;
    clientArr : client.clientArrAccess ;
-   userI : userInterface.userAccess ;
 
    talkative : Boolean := false;
    intTalk : Integer ;
@@ -33,11 +38,14 @@ begin
       talkative := true;
    end if;
 
-   addMachArr := addingMachine.initAddMach(constants.AddMach);
-   multiMachArr := multiMachine.initMultiMach(constants.MultiMach);
+   addMachArr := addingMachine.initAddMach(constants.AddMach,talkative);
+   multiMachArr := multiMachine.initMultiMach(constants.MultiMach,talkative);
+
+   servicePtr := new service.service(addMachArr,multiMachArr);
+   servicemanArr := serviceman.initServiceman(constants.Servisants,servicePtr,addMachArr,multiMachArr,talkative);
 
    bossArr := boss.initBosses(constants.Bosses,talkative,jobTabPtr);
-   workerArr := worker.initWorkers(constants.Workers,talkative,jobTabPtr,warePtr,addMachArr,multiMachArr);
+   workerArr := worker.initWorkers(constants.Workers,talkative,jobTabPtr,warePtr,addMachArr,multiMachArr,servicePtr);
    clientArr := client.initClients(constants.Clients,talkative,warePtr);
 
    if talkative = false then

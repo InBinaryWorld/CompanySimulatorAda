@@ -5,7 +5,7 @@ with Ada.Text_IO;
 with random;
 with constants;
 with random;
-
+with service;
 package body worker is
    task body worker is
       someJob : job.jobPtr;
@@ -33,10 +33,12 @@ package body worker is
          if(talkative) then
             Ada.Text_IO.Put_Line("Worker " & Integer'Image(id) & " resolve Task"
                                  & Integer'Image(someJob.all.arg1) & someJob.all.operator
-                                 & Integer'Image(someJob.all.arg2) & " =" & Integer'Image(someJob.all.result));
+                                 & Integer'Image(someJob.all.arg2));
          end if;
 
-         case someJob.all.operator is
+
+         while someJob.all.isDone = false loop
+            case someJob.all.operator is
             when '*' =>
                maxIdx := constants.MultiMach;
                idx := random.get(maxIdx)+1;
@@ -45,14 +47,13 @@ package body worker is
                  -- Ada.Text_IO.Put_Line("patient " & id'Image & " idx: " & idx'Image & " multi");
 
                   multiMachArr.all(idx).pushJob(someJob);
-               multiMachArr.all(idx).pullJob(someJob);
+                  multiMachArr.all(idx).pullJob(someJob);
 
                else
                   done :=false;
                   while done = false loop
                         --Ada.Text_IO.Put_Line("unpatient " & id'Image & " loop multi  idx:" & idx'image);
                      select
-
                         multiMachArr.all(idx).pushJob(someJob);
                         --Ada.Text_IO.Put_Line("unpatient " & id'Image & " idx: " & idx'Image & " multi");
                         multiMachArr.all(idx).pullJob(someJob);
@@ -65,18 +66,19 @@ package body worker is
                         if idx = maxIdx+1 then
                            idx := 1;
                         end if;
-                  end select;
+                     end select;
                   end loop;
                end if;
 
-
+               if someJob.all.isDone = false then
+                  servicePtr.all.damageMulti(idx);
+                  delay constants.ChangeMachineTime;
+               end if;
             when others =>
                maxIdx := constants.AddMach;
                idx := random.get(maxIdx)+1;
 
                if isPatient = 1 then
-
-
                   --Ada.Text_IO.Put_Line("patient " & id'Image & " idx: " & idx'Image & " add");
 
                   addMachArr.all(idx).pushJob(someJob);
@@ -85,7 +87,7 @@ package body worker is
                else
                   done :=false;
                   while done = false loop
-                        --Ada.Text_IO.Put_Line("unpatient " & id'Image & " loop add idx: " & idx'Image);
+                     --Ada.Text_IO.Put_Line("unpatient " & id'Image & " loop add idx: " & idx'Image);
                      select
                         addMachArr.all(idx).pushJob(someJob);
                         --Ada.Text_IO.Put_Line("unpatient " & id'Image & " idx: " & idx'Image & " add");
@@ -93,30 +95,35 @@ package body worker is
                         done := true;
                      or
                         delay constants.Unpatient;
-
                         --Ada.Text_IO.Put_Line("patient " & id'Image & " change add");
                         idx := idx +1;
                         if idx = maxIdx+1 then
                            idx := 1;
                         end if;
+                        delay constants.ChangeMachineTime;
                      end select;
                   end loop;
                end if;
-         end case;
+               if someJob.all.isDone = false then
+                  servicePtr.all.damageAdd(idx);
+                  delay constants.ChangeMachineTime;
+               end if;
+            end case;
+         end loop;
 
-         counter:= counter +1;
+         counter:= counter+1;
          warePtr.all.pushResult(someJob);
          delay constants.WorkerSpeed ;
       end loop;
    end worker;
 
    function initWorkers (Size : Integer; talkative : Boolean; JobTabPtr : jobtable.jobTabPtr ;warePtr : warehouse.whPtr;
-                         addMachArr : addingMachine.addMachArrAcc ;multiMachArr : multiMachine.multiMachArrAcc) return workerArrAccess is
+                         addMachArr : addingMachine.addMachArrAcc ;multiMachArr : multiMachine.multiMachArrAcc; servicePtr :service.servicePtr) return workerArrAccess is
       workerTabPtr : workerArrAccess;
    begin
       workerTabPtr := new workerArray(1 .. Size);
       for i in workerTabPtr.all'Range loop
-         workerTabPtr.all(i):=new worker(i,talkative,jobTabPtr,warePtr,addMachArr,multiMachArr);
+         workerTabPtr.all(i):=new worker(i,talkative,jobTabPtr,warePtr,addMachArr,multiMachArr,servicePtr);
       end loop;
       return workerTabPtr;
    end initWorkers;

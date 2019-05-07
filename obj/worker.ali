@@ -29,7 +29,7 @@ RV MAX_SELECT_ALTERNATIVES=1
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U worker%b		worker.adb		1ac47d95 OO PK IL
+U worker%b		worker.adb		17fe827b OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -38,9 +38,9 @@ W constants%s		constants.ads		constants.ali
 W job%s			job.adb			job.ali
 W jobtable%s		jobtable.adb		jobtable.ali
 W random%s		random.adb		random.ali
+W service%s		service.adb		service.ali
 Z system%s		system.ads		system.ali
 Z system.concat_6%s	s-conca6.adb		s-conca6.ali
-Z system.concat_8%s	s-conca8.adb		s-conca8.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
@@ -48,13 +48,14 @@ Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W warehouse%s		warehouse.adb		warehouse.ali
 
-U worker%s		worker.ads		67fd8f9c EE OO PK IL
+U worker%s		worker.ads		4bc416fb EE OO PK IL
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W addingmachine%s	addingmachine.adb	addingmachine.ali
 W job%s			job.adb			job.ali
 W jobtable%s		jobtable.adb		jobtable.ali
 W multimachine%s	multimachine.adb	multimachine.ali
+W service%s		service.adb		service.ali
 Z system%s		system.ads		system.ali
 Z system.parameters%s	s-parame.adb		s-parame.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -74,20 +75,20 @@ D a-stream.ads		20180524051736 119b8fb3 ada.streams%s
 D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
-D addingmachine.ads	20190418150700 ec32ff85 addingmachine%s
-D constants.ads		20190419080230 41b46e04 constants%s
+D addingmachine.ads	20190506125126 12c237cc addingmachine%s
+D constants.ads		20190506134546 9a729a43 constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
-D job.ads		20190318102118 062f9413 job%s
+D job.ads		20190506092006 e9ab4254 job%s
 D jobtable.ads		20190318114930 22157f19 jobtable%s
-D multimachine.ads	20190418150712 514a6c62 multimachine%s
+D multimachine.ads	20190506125126 99ccc25e multimachine%s
 D random.ads		20190418174832 5194e0f8 random%s
+D service.ads		20190506132006 1b97b92d service%s
 D system.ads		20180524051738 32a08138 system%s
 D s-atacco.ads		20180524051738 4c36d12f system.address_to_access_conversions%s
 D s-conca6.ads		20180524051736 d2c72db2 system.concat_6%s
-D s-conca8.ads		20180524051736 e3074dd7 system.concat_8%s
 D s-crtl.ads		20180524051736 0ebbdb71 system.crtl%s
 D s-exctab.ads		20180524051738 54135002 system.exception_table%s
 D s-ficobl.ads		20180524051738 078245e4 system.file_control_block%s
@@ -115,86 +116,95 @@ D s-unstyp.ads		20180524051736 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20180524051738 1b7d22d2 system.wch_con%s
 D s-win32.ads		20180524051736 b7f96285 system.win32%s
 D warehouse.ads		20190320183900 39911216 warehouse%s
-D worker.ads		20190418183148 c72ee567 worker%s
-D worker.adb		20190419075104 09e8bcb0 worker%b
+D worker.ads		20190506121254 2972751f worker%s
+D worker.adb		20190506134130 c55b480b worker%b
 X 1 ada.ads
 16K9*Ada 20e8 54|4r6 24r19 34r13
 X 10 a-textio.ads
 49K13*Text_IO 471e16 54|4w10 24r23 34r17
 263U14*Put_Line 54|24s31 34s25
 X 12 addingmachine.ads
-3K9*addingMachine 13e18 53|3w6 8r34 14r37 54|114r39
-5Y13 pullJob 54|83s39 92s45
-6Y13 pushJob 54|82s39 90s45
-8P9*addingMachinePtr(4T14)
-10A9*addMachArr(8P9)<integer>
-11P9*addMachArrAcc(10A9) 53|8r48 14r51 54|114r53
+3K9*addingmachine 14e18 53|3w6 9r34 15r37 54|121r39
+5Y13 pullJob 54|85s39 94s45
+6Y13 pushJob 54|84s39 92s45
+9P9*addingMachinePtr(4T14)
+11A9*addMachArr(9P9)<integer>
+12P9*addMachArrAcc(11A9) 53|9r48 15r51 54|121r53
 X 13 constants.ads
-1K9*constants 19e14 54|6w6 41r26 61r31 74r26 95r31 109r16
-9i4*AddMach{positive} 54|74r36
-10i4*MultiMach{positive} 54|41r36
-13o4*WorkerSpeed{duration} 54|109r26
-18o4*Unpatient{duration} 54|61r41 95r41
+1K9*constants 23e14 54|6w6 43r26 62r31 75r25 78r26 97r31 103r31 109r25 116r16
+9i4*AddMach{positive} 54|78r36
+10i4*MultiMach{positive} 54|43r36
+14o4*WorkerSpeed{duration} 54|116r26
+19o4*ChangeMachineTime{duration} 54|75r35 103r41 109r35
+21o4*Unpatient{duration} 54|62r41 97r41
 X 18 job.ads
-1K9*job 12e8 53|5w6 54|1w6 11r17
+1K9*job 13e8 53|5w6 54|1w6 11r17
 4i7*arg1{integer} 54|35r62
 5i7*arg2{integer} 54|36r62
-6e7*operator{character} 54|35r82 39r27
-7i7*result{integer} 54|36r103
-9P9*jobPtr(3R9) 54|11r21
+6e7*operator{character} 54|35r82 41r30
+8b7*isDone{boolean} 54|40r28 73r31 107r31
+10P9*jobPtr(3R9) 54|11r21
 X 19 jobtable.ads
-4K9*jobTable 12e13 53|1w6 7r69 13r74 54|2w6 113r75
+4K9*jobTable 12e13 53|1w6 8r69 14r74 54|2w6 120r75
 6Y13 pullJob 54|31s20
-11P9*jobTabPtr(5T14) 53|7r78 13r83 54|113r84
+11P9*jobTabPtr(5T14) 53|8r78 14r83 54|120r84
 X 20 multimachine.ads
-2K9*multiMachine 14e17 53|4w6 8r78 14r81 54|114r83
-4Y13 pullJob 54|48s38 58s47
-5Y13 pushJob 54|47s41 56s47
-7P9*multiMachinePtr(3T14)
-10A9*multiMachArr(7P9)<integer>
-11P9*multiMachArrAcc(10A9) 53|8r91 14r94 54|114r96
+2K9*multimachine 15e17 53|4w6 9r78 15r81 54|121r83
+4Y13 pullJob 54|50s41 59s47
+5Y13 pushJob 54|49s41 57s47
+8P9*multiMachinePtr(3T14)
+11A9*multiMachArr(8P9)<integer>
+12P9*multiMachArrAcc(11A9) 53|9r91 15r94 54|121r96
 X 21 random.ads
-1K9*random 3e11 54|5w6 7w6 18r20 42r23 75r23
-2V13*get{integer} 54|18s27 42s30 75s30
+1K9*random 3e11 54|5w6 7w6 18r20 44r23 79r23
+2V13*get{integer} 54|18s27 44s30 79s30
+X 22 service.ads
+4K9*service 14e12 53|6w6 9r120 15r123 54|8w6 121r125
+6Y13 damageAdd 54|108s34
+7Y13 damageMulti 54|74s34
+12P9*servicePtr(5T14) 53|9r128 15r131 54|121r133
 X 37 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 52 warehouse.ads
-3K9*warehouse 11e14 53|2w6 7r99 13r104 54|3w6 113r105
-6Y13 pushResult 54|108s22
-9P9*whPtr(4T14) 53|7r109 13r114 54|113r115
+3K9*warehouse 11e14 53|2w6 8r99 14r104 54|3w6 120r105
+6Y13 pushResult 54|115s22
+9P9*whPtr(4T14) 53|8r109 14r114 54|120r115
 X 53 worker.ads
-6K9*worker 16l5 16e11 54|9b14 126l5 126t11
-7T14*worker 7d21 7d36 7d57 7d89 8d21 8d63 10l8 10e14 11r59 54|10b14 111l8
-. 111t14 119r35
-7i21 id{integer} 54|24r52 34r60
-7b36 talkative{boolean} 54|33r13
-7p57 JobTabPtr{19|11P9} 54|31r10
-7p89 warePtr{52|9P9} 54|108r10
-8p21 addMachArr{12|11P9} 54|82r19 83r19 90r25 92r25
-8p63 multiMachArr{20|11P9} 54|47r19 48r16 56r25 58r25
-9Y13 pushCmd 9>21 54|22b20 26l17 26t24
-9i21 cmd{integer} 54|23r20
-11A9*workerArray(7T14)<integer> 12r35 54|117r27
-12P9*workerArrAccess(11A9) 14r118 54|114r120 115r22
-13V13*initWorkers{12P9} 13>25 13>41 13>62 13>94 14>24 14>66 54|113b13 122l8
-. 122t19
-13i25 Size{integer} 54|113b26 117r44
-13b41 talkative{boolean} 54|113b42 119r44
-13p62 JobTabPtr{19|11P9} 54|113b63 119r54
-13p94 warePtr{52|9P9} 54|113b95 119r64
-14p24 addMachArr{12|11P9} 54|114b26 119r72
-14p66 multiMachArr{20|11P9} 54|114b68 119r83
+7K9*worker 17l5 17e11 54|9b14 133l5 133t11
+8T14*worker 8d21 8d36 8d57 8d89 9d21 9d63 9d108 11l8 11e14 12r59 54|10b14
+. 118l8 118t14 126r35
+8i21 id{integer} 54|24r52 34r60
+8b36 talkative{boolean} 54|33r13
+8p57 JobTabPtr{19|11P9} 54|31r10
+8p89 warePtr{52|9P9} 54|115r10
+9p21 addMachArr{12|12P9} 54|84r19 85r19 92r25 94r25
+9p63 multiMachArr{20|12P9} 54|49r19 50r19 57r25 59r25
+9p108 servicePtr{22|12P9} 54|74r19 108r19
+10Y13 pushCmd 10>21 54|22b20 26l17 26t24
+10i21 cmd{integer} 54|23r20
+12A9*workerArray(8T14)<integer> 13r35 54|124r27
+13P9*workerArrAccess(12A9) 15r150 54|121r152 122r22
+14V13*initWorkers{13P9} 14>25 14>41 14>62 14>94 15>24 15>66 15>111 54|120b13
+. 129l8 129t19
+14i25 Size{integer} 54|120b26 124r44
+14b41 talkative{boolean} 54|120b42 126r44
+14p62 JobTabPtr{19|11P9} 54|120b63 126r54
+14p94 warePtr{52|9P9} 54|120b95 126r64
+15p24 addMachArr{12|12P9} 54|121b26 126r72
+15p66 multiMachArr{20|12P9} 54|121b68 126r83
+15p111 servicePtr{22|12P9} 54|121b113 126r96
 X 54 worker.adb
-11p7 someJob{18|9P9} 31m28 31r28 35r50 35r70 36r50 36r91 39r15 47r49 48m46
-. 48r46 56r55 58m55 58r55 82r47 83m47 83r47 90r53 92m53 92r53 108r33
-12i7 isPatient{integer} 18m7 24r78 43r19 77r19
-13i7 idx{integer} 42m16 47r36 48r33 56r42 58r42 64m25 64r32 65r28 66m28 75m16
-. 82r34 83r34 90r40 92r40 98m25 98r32 99r28 100m28
-14i7 maxIdx{integer} 41m16 42r34 65r34 74m16 75r34 99r34
-15i7 counter{integer} 24r111 107m10 107r20
-16b7 done{boolean} 51m19 52r25 59m25 86m19 87r25 93m25
+11p7 someJob{18|10P9} 31m28 31r28 35r50 35r70 36r50 40r16 41r18 49r49 50m49
+. 50r49 57r55 59m55 59r55 73r19 84r47 85m47 85r47 92r53 94m53 94r53 107r19
+. 115r33
+12i7 isPatient{integer} 18m7 24r78 45r19 81r19
+13i7 idx{integer} 44m16 49r36 50r36 57r42 59r42 65m25 65r32 66r28 67m28 74r46
+. 79m16 84r34 85r34 92r40 94r40 99m25 99r32 100r28 101m28 108r44
+14i7 maxIdx{integer} 43m16 44r34 66r34 78m16 79r34 100r34
+15i7 counter{integer} 24r111 114m10 114r20
+16b7 done{boolean} 53m19 54r25 60m25 88m19 89r25 95m25
 22i28 cmd{integer}
-115p7 workerTabPtr{53|12P9} 117m7 118r16 119r10 121r14
-118i11 i{integer} 119r27 119r42
+122p7 workerTabPtr{53|13P9} 124m7 125r16 126r10 128r14
+125i11 i{integer} 126r27 126r42
 
