@@ -17,7 +17,7 @@ RV SPARK_05
 RV MAX_SELECT_ALTERNATIVES=5
 RV MAX_TASK_ENTRIES=5
 
-U service%b		service.adb		b81dc246 OO PK IL
+U service%b		service.adb		6ed4b42f OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -29,7 +29,7 @@ Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U service%s		service.ads		0aebd6fc EE OO PK IL
+U service%s		service.ads		dc22a095 EE OO PK IL
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 W addingmachine%s	addingmachine.adb	addingmachine.ali
 W constants%s		constants.ads		constants.ali
@@ -51,7 +51,7 @@ D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D addingmachine.ads	20190506125126 12c237cc addingmachine%s
-D constants.ads		20190506134546 9a729a43 constants%s
+D constants.ads		20190506135510 4cbbec2a constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
@@ -59,7 +59,7 @@ D i-cstrea.ads		20180524051736 e53d8b8e interfaces.c_streams%s
 D job.ads		20190506092006 e9ab4254 job%s
 D multimachine.ads	20190506125126 99ccc25e multimachine%s
 D service.ads		20190506132006 1b97b92d service%s
-D service.adb		20190506132342 ab563aaf service%b
+D service.adb		20190506140804 ab563aaf service%b
 D serviceman.ads	20190506112822 1ab368dd serviceman%s
 D system.ads		20180524051738 32a08138 system%s
 D s-atacco.ads		20180524051738 4c36d12f system.address_to_access_conversions%s
@@ -118,13 +118,13 @@ X 18 service.ads
 8Y13 pullToRepair 8<26 19|31b23 36l20 36t32
 8i26 idx{integer} 19|32m19 32r19
 9Y13 repairedAdd 9>25 19|38b20 40l17 40t28
-9i25 idx{integer} 19|39r31
+9i25 idx{integer} 19|39r28
 10Y13 repairedMulti 10>27 19|42b20 44l17 44t30
 10i27 idx{integer} 19|43r30
 12P9*servicePtr(5T14)
 13A9*Q(integer)<integer> 19|8r15
 X 19 service.adb
-6a7 addIsFixing(boolean) 15r19 16m19 39m19
+6a7 addIsFixing(boolean) 15r19 16m19 39m16
 7a7 multiIsFixing(boolean) 23r19 24m19 43m16
 8a7 queue{18|13A9} 18m19 26m19 32r26 33m19 33r25 33r40 33r57 33r63 33r80
 . 34m19 34r25

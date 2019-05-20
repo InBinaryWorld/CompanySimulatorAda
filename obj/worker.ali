@@ -29,7 +29,7 @@ RV MAX_SELECT_ALTERNATIVES=1
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 
-U worker%b		worker.adb		17fe827b OO PK IL
+U worker%b		worker.adb		c137f412 OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -76,7 +76,7 @@ D a-tags.ads		20180524051738 491b781d ada.tags%s
 D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D addingmachine.ads	20190506125126 12c237cc addingmachine%s
-D constants.ads		20190506134546 9a729a43 constants%s
+D constants.ads		20190506135510 4cbbec2a constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s

@@ -18,7 +18,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_TASKS=1+
 
-U main%b		main.adb		2357d613 NE OO SU
+U main%b		main.adb		f59ea07a NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -52,7 +52,7 @@ D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D addingmachine.ads	20190506125126 12c237cc addingmachine%s
 D boss.ads		20190320203654 67920620 boss%s
 D client.ads		20190320203504 0a389297 client%s
-D constants.ads		20190506134546 9a729a43 constants%s
+D constants.ads		20190506135510 4cbbec2a constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s

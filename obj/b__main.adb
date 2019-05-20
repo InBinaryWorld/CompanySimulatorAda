@@ -356,23 +356,23 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\constants.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\job.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\jobtable.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\random.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\addingmachine.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\boss.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\multimachine.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\serviceman.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\service.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\warehouse.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\client.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\worker.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\userinterface.o
-   --   C:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\main.o
-   --   -LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\
-   --   -LC:\Users\Lenovo\Desktop\Semestr4\PW\1\ada\obj\
-   --   -LC:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\constants.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\job.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\jobtable.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\random.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\addingmachine.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\boss.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\multimachine.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\serviceman.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\service.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\warehouse.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\client.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\worker.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\userinterface.o
+   --   C:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\main.o
+   --   -LC:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\
+   --   -LC:\Users\monsz\Desktop\Semestr4\PW\1\ada\obj\
+   --   -LD:/gnat/2018/lib/gcc/x86_64-pc-mingw32/7.3.1/adalib/
    --   -static
    --   -lgnarl
    --   -lgnat

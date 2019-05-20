@@ -43,7 +43,7 @@ Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U addingmachine%s	addingmachine.ads	611befdb EE OO PK IL
+U addingmachine%s	addingmachine.ads	b7d299b2 EE OO PK IL
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W constants%s		constants.ads		constants.ali
@@ -68,7 +68,7 @@ D a-textio.ads		20180524051738 881db35a ada.text_io%s
 D a-unccon.ads		20180524051738 0e9b276f ada.unchecked_conversion%s
 D addingmachine.ads	20190506125126 12c237cc addingmachine%s
 D addingmachine.adb	20190506130216 bffa23b6 addingmachine%b
-D constants.ads		20190506134546 9a729a43 constants%s
+D constants.ads		20190506135510 4cbbec2a constants%s
 D interfac.ads		20180524051736 5ab55268 interfaces%s
 D i-c.ads		20180524051736 5421119b interfaces.c%s
 D i-cstrin.ads		20180524051736 341d0ddf interfaces.c.strings%s
